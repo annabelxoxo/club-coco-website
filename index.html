@@ -125,6 +125,9 @@ nav ul a:hover{text-decoration:underline;text-underline-offset:4px}
 .item{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px dashed var(--line)}
 .item .price{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--muted)}
 .heart{color:var(--brand)}
+.item small{display:block;font-size:.82rem;color:var(--muted);line-height:1.35;margin-top:2px}
+.item .price{white-space:nowrap}
+.soon{margin:12px 0 0;color:var(--muted);font-style:italic}
 .note{margin-top:28px;font-size:.9rem;color:var(--muted)}
 .menu-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,20px);margin:0 0 48px}
 .menu-photos figure{margin:0;position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/5;min-width:0}
@@ -229,7 +232,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div>
         <p class="eyebrow">Wat we schenken</p>
         <h2>De kaart</h2>
-        <p>Een greep uit wat je bij ons vindt. Gerechten met een <span class="heart">♥</span> zijn favorieten van het huis.</p>
+        <p>Specialty coffee by Crossroast, huisgemaakte ice tea en verse pastries. Met een <span class="heart">♥</span> zijn favorieten van het huis.</p>
       </div>
       <div class="steel" aria-hidden="true"><span><b>Coco</b>specialty coffee</span></div>
     </div>
@@ -240,50 +243,97 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     </div>
     <div class="menu-grid">
       <div class="menu-col">
-        <div class="cat"><h3>Koffie</h3>
-          <div class="item"><span>Espresso</span><span class="price">€ –</span></div>
-          <div class="item"><span>Americano</span><span class="price">€ –</span></div>
-          <div class="item"><span>Cortado</span><span class="price">€ –</span></div>
-          <div class="item"><span>Cappuccino</span><span class="price">€ –</span></div>
-          <div class="item"><span>Flat white</span><span class="price">€ –</span></div>
-          <div class="item"><span>Latte</span><span class="price">€ –</span></div>
+        <div class="cat"><h3>Specialty coffee</h3>
+          <div class="item"><span>Espresso (dubbel)</span><span class="price">3,00</span></div>
+          <div class="item"><span><span class="heart">♥</span> Americano</span><span class="price">3,40</span></div>
+          <div class="item"><span>Filter</span><span class="price">4,00</span></div>
+          <div class="item"><span>Cortado</span><span class="price">3,60</span></div>
+          <div class="item"><span>Cappuccino</span><span class="price">4,00</span></div>
+          <div class="item"><span><span class="heart">♥</span> Flat white</span><span class="price">4,80</span></div>
+          <div class="item"><span>Latte macchiato</span><span class="price">4,50</span></div>
+        </div>
+        <div class="cat"><h3>Extra's</h3>
+          <div class="item"><span>Kannetje koemelk</span><span class="price">+0,30</span></div>
+          <div class="item"><span>Plantaardige melk<small>haver · kokos · soya · amandel ♥</small></span><span class="price">+0,50</span></div>
+          <div class="item"><span>Iced</span><span class="price">+0,50</span></div>
+          <div class="item"><span>Vanille</span><span class="price">+1,00</span></div>
+          <div class="item"><span>Caramel</span><span class="price">+1,00</span></div>
         </div>
         <div class="cat"><h3>Chai latte &amp; matcha</h3>
-          <div class="item"><span>Chai latte</span><span class="price">€ –</span></div>
-          <div class="item"><span>Matcha latte</span><span class="price">€ –</span></div>
+          <div class="item"><span>Chai latte massala</span><span class="price">4,60</span></div>
+          <div class="item"><span>Chai latte unsweetened</span><span class="price">4,60</span></div>
+          <div class="item"><span>Matcha latte</span><span class="price">5,50</span></div>
+          <div class="item"><span><span class="heart">♥</span> Matcha Coco<small>iced met kokosmelk en mangopuree</small></span><span class="price">6,50</span></div>
+        </div>
+        <div class="cat"><h3>Verse thee</h3>
+          <div class="item"><span>Earl grey</span><span class="price">3,40</span></div>
+          <div class="item"><span>Groene thee</span><span class="price">3,40</span></div>
+          <div class="item"><span>Kamille</span><span class="price">3,40</span></div>
+          <div class="item"><span><span class="heart">♥</span> Rode vruchtenmix</span><span class="price">3,40</span></div>
+          <div class="item"><span>Verse munt</span><span class="price">4,00</span></div>
+          <div class="item"><span><span class="heart">♥</span> Verse gemberthee</span><span class="price">4,00</span></div>
         </div>
       </div>
       <div class="menu-col">
-        <div class="cat"><h3>Verse thee &amp; choco</h3>
-          <div class="item"><span>Verse muntthee</span><span class="price">€ –</span></div>
-          <div class="item"><span>Verse gemberthee</span><span class="price">€ –</span></div>
-          <div class="item"><span>Warme chocomelk</span><span class="price">€ –</span></div>
+        <div class="cat"><h3>Warme chocomelk</h3>
+          <div class="item"><span>Melkchocolade</span><span class="price">4,00</span></div>
+          <div class="item"><span>Pure chocolade</span><span class="price">4,00</span></div>
+          <div class="item"><span>Slagroom</span><span class="price">+1,00</span></div>
         </div>
-        <div class="cat"><h3>Homemade</h3>
-          <div class="item"><span><span class="heart">♥</span> Homemade ice tea</span><span class="price">€ –</span></div>
-          <div class="item"><span><span class="heart">♥</span> Homemade limonade</span><span class="price">€ –</span></div>
+        <div class="cat"><h3>Homemade ice tea</h3>
+          <div class="item"><span><span class="heart">♥</span> Framboos – zwarte thee</span><span class="price">4,50</span></div>
+          <div class="item"><span>Granaatappel – munt</span><span class="price">4,50</span></div>
+          <div class="item"><span>Cold brewed tea – rode vruchten</span><span class="price">4,50</span></div>
         </div>
-        <div class="cat"><h3>Cava, wijn &amp; bier</h3>
-          <div class="item"><span>Cava</span><span class="price">€ –</span></div>
-          <div class="item"><span>Wijn</span><span class="price">€ –</span></div>
-          <div class="item"><span>Bieren</span><span class="price">€ –</span></div>
+        <div class="cat"><h3>Homemade lemonades</h3>
+          <div class="item"><span>Gember – citroen</span><span class="price">4,50</span></div>
+          <div class="item"><span>Vlierbloesem – citroen</span><span class="price">4,50</span></div>
+        </div>
+        <div class="cat"><h3>Cava &amp; wijn</h3>
+          <div class="item"><span><span class="heart">♥</span> Cava<small>GM Brut · glas / fles</small></span><span class="price">7,90 / 32</span></div>
+          <div class="item"><span>Witte wijn<small>glas / fles</small></span><span class="price">6,90 / 32</span></div>
+          <div class="item"><span><span class="heart">♥</span> Rode wijn<small>glas / fles</small></span></div>
+          <div class="item"><span>Rosé<small>Ilagares, Spaans 2025 · glas / fles</small></span></div>
+          <div class="item"><span>Oranje wijn<small>Materia Prima Orange 2025 · glas / fles</small></span><span class="price">9 / 45</span></div>
+        </div>
+        <div class="cat"><h3>Bieren</h3>
+          <div class="item"><span>Stella – Stella 0%</span><span class="price">3,20</span></div>
+          <div class="item"><span>Fourchette</span><span class="price">5,00</span></div>
+          <div class="item"><span>Liefmans – Liefmans 0%</span><span class="price">3,90</span></div>
+          <div class="item"><span>Triple d'Anvers</span><span class="price">4,00</span></div>
+          <div class="item"><span>Duvel</span><span class="price">4,80</span></div>
         </div>
       </div>
       <div class="menu-col">
-        <div class="cat"><h3>Ontbijt &amp; lunch</h3>
-          <div class="item"><span class="invul">[Gerecht]</span><span class="price">€ –</span></div>
-          <div class="item"><span class="invul">[Gerecht]</span><span class="price">€ –</span></div>
-          <div class="item"><span class="invul">[Gerecht]</span><span class="price">€ –</span></div>
+        <div class="cat"><h3>Frisdranken</h3>
+          <div class="item"><span>Plat water – bruis water</span><span class="price">3,20</span></div>
+          <div class="item"><span>Chaudfontaine 0,5 L</span><span class="price">5,50</span></div>
+          <div class="item"><span>Coco Cola – Cola zero</span><span class="price">3,20</span></div>
+          <div class="item"><span>Lipton Ice Tea – Ice Tea Green</span><span class="price">3,20</span></div>
+          <div class="item"><span><span class="heart">♥</span> Vers appelsap</span><span class="price">3,90</span></div>
+          <div class="item"><span>Vers appelsiensap</span><span class="price">3,90</span></div>
+          <div class="item"><span>Almdudler</span><span class="price">4,60</span></div>
+          <div class="item"><span>Jarr kombucha peach – yuzu</span><span class="price">4,60</span></div>
+          <div class="item"><span>Jarr kombucha ginger lemon</span><span class="price">4,60</span></div>
+          <div class="item"><span>Big Tom tomatensap</span><span class="price">4,50</span></div>
+          <div class="item"><span>Schweppes Selection Tonic</span><span class="price">3,40</span></div>
+          <div class="item"><span>Schweppes Ginger Beer – chili</span><span class="price">3,40</span></div>
         </div>
         <div class="cat"><h3>Pastries &amp; snacks</h3>
-          <div class="item"><span>Croissant</span><span class="price">€ –</span></div>
-          <div class="item"><span>Cinnamon bun</span><span class="price">€ –</span></div>
-          <div class="item"><span>Kardemom bun</span><span class="price">€ –</span></div>
-          <div class="item"><span>Pastry van de week</span><span class="price">€ –</span></div>
+          <div class="item"><span>Croissant</span><span class="price">3,00</span></div>
+          <div class="item"><span>Croissant confituur</span><span class="price">4,50</span></div>
+          <div class="item"><span>Chocoladebroodje</span><span class="price">3,00</span></div>
+          <div class="item"><span>Cinnamon bun</span><span class="price">4,50</span></div>
+          <div class="item"><span><span class="heart">♥</span> Kardemom bun</span><span class="price">5,00</span></div>
+          <div class="item"><span>Chocolade bun</span><span class="price">5,00</span></div>
+          <div class="item"><span>Pastry van de week<small>vraag naar het aanbod</small></span></div>
+        </div>
+        <div class="cat"><h3>Ontbijt &amp; lunch</h3>
+          <p class="soon">Ons ontbijt- en lunchmenu staat binnenkort online.</p>
         </div>
       </div>
     </div>
-    <p class="note"><span class="invul">Prijzen en volledige kaart invullen</span>: de items komen van de menukaart op de foto, maar die was te klein om alles goed te lezen.</p>
+    <p class="note">Prijzen in euro. Onze koffie is specialty coffee van <strong>Crossroast</strong>.</p>
   </div>
 </section>
 
