@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Categorie bewerken · club Coco admin</title>
+<link rel="icon" href="../images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Figtree:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+<div class="demo-bar" role="note">DEMO · dit is een voorbeeld op GitHub Pages: wijzigingen worden niet opgeslagen</div>
+<style>
+.demo-bar{position:sticky;top:0;z-index:999;background:#fbe7a6;color:#3b0d13;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:7px 12px}
+.demo-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:1000;background:#3b0d13;color:#fff;font:500 14px/1.4 system-ui,sans-serif;padding:12px 18px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.3);max-width:calc(100% - 32px)}
+</style>
+<script>
+document.addEventListener('submit', function (e) {
+  var f = e.target, doel = f.getAttribute('data-demo-doel');
+  e.preventDefault();
+  if (doel) { location.href = doel; return; }
+  var t = document.querySelector('.demo-toast') || document.body.appendChild(document.createElement('div'));
+  t.className = 'demo-toast';
+  t.textContent = 'Demo: opslaan werkt pas als de site op echte PHP-hosting staat.';
+  clearTimeout(t._t); t._t = setTimeout(function () { t.remove(); }, 3500);
+});
+</script>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html">club <b>Coco</b> <span>admin</span></a>
+    <nav>
+              <a href="index.html">Overzicht</a>
+              <a href="kaart.html" aria-current="page">Kaart</a>
+              <a href="uren.html">Openingsuren</a>
+              <a href="fotos.html">Foto&#039;s</a>
+              <a href="teksten.html">Teksten &amp; gegevens</a>
+              <a href="account.html">Account</a>
+          </nav>
+    <div class="who">
+      <a href="../" target="_blank" rel="noopener">Bekijk site ↗</a>
+      <form method="post" action="login.html" data-demo-doel="login.html"><button class="linkbtn">Uitloggen</button></form>
+    </div>
+  </div>
+</header>
+<main class="page">
+<div class="page-head">
+  <div>
+    <h1>Categorie bewerken</h1>
+    <p><a href="kaart.html">← Terug naar de kaart</a></p>
+  </div>
+</div>
+
+<div class="card">
+    <form class="stack" method="post">
+        <label>Naam <span class="hint">bv. "Ontbijt &amp; lunch"</span>
+      <input type="text" name="naam" id="naam" value="Homemade ice tea" required maxlength="100" autofocus>
+    </label>
+    <label>Kolom op de website <span class="hint">De kaart staat in 3 kolommen naast elkaar (op gsm onder elkaar).</span>
+      <select name="kolom" id="kolom">
+                  <option value="1" >Kolom 1 (links)</option>
+                  <option value="2" selected>Kolom 2 (midden)</option>
+                  <option value="3" >Kolom 3 (rechts)</option>
+              </select>
+    </label>
+    <label>Notitie <span class="hint">optioneel, klein onder de categorie (bv. "Ons lunchmenu staat binnenkort online")</span>
+      <input type="text" name="notitie" id="notitie" value="" maxlength="255">
+    </label>
+    <label class="check"><input type="checkbox" name="zichtbaar" id="zichtbaar" checked> Tonen op de website</label>
+    <div class="actions">
+      <button class="btn" type="submit">Opslaan</button>
+      <a class="btn light" href="kaart.html">Annuleren</a>
+    </div>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Verwijderen</h2>
+  <p class="muted small" style="margin-bottom:12px">
+    Let op: de 3 items in deze categorie worden ook verwijderd.  </p>
+  <form method="post">
+        <label class="check" style="margin-bottom:10px"><input type="checkbox" id="zeker" required> Ja, verwijder "Homemade ice tea" met alle items</label>
+    <button class="btn danger" name="actie" value="verwijder">Verwijder categorie</button>
+  </form>
+</div>
+</main>
+</body>
+</html>

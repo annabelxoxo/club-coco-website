@@ -3,6 +3,11 @@
 # Geen mappenlijst tonen
 Options -Indexes
 
+# Altijd de PHP-site tonen, niet de statische GitHub Pages-demo (index.html, admin/*.html)
+DirectoryIndex index.php index.html
+RedirectMatch 301 ^(.*)/admin/[a-z0-9-]*\.html$ $1/admin/
+RedirectMatch 301 ^(.*)/index\.html$ $1/
+
 # Geheime bestanden nooit tonen
 <FilesMatch "^(config\.php|config\.sample\.php|\.env|.*\.sql|.*\.md|\.git.*)$">
   Require all denied

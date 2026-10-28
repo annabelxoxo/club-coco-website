@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Foto&#039;s · club Coco admin</title>
+<link rel="icon" href="../images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Figtree:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+<div class="demo-bar" role="note">DEMO · dit is een voorbeeld op GitHub Pages: wijzigingen worden niet opgeslagen</div>
+<style>
+.demo-bar{position:sticky;top:0;z-index:999;background:#fbe7a6;color:#3b0d13;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:7px 12px}
+.demo-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:1000;background:#3b0d13;color:#fff;font:500 14px/1.4 system-ui,sans-serif;padding:12px 18px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.3);max-width:calc(100% - 32px)}
+</style>
+<script>
+document.addEventListener('submit', function (e) {
+  var f = e.target, doel = f.getAttribute('data-demo-doel');
+  e.preventDefault();
+  if (doel) { location.href = doel; return; }
+  var t = document.querySelector('.demo-toast') || document.body.appendChild(document.createElement('div'));
+  t.className = 'demo-toast';
+  t.textContent = 'Demo: opslaan werkt pas als de site op echte PHP-hosting staat.';
+  clearTimeout(t._t); t._t = setTimeout(function () { t.remove(); }, 3500);
+});
+</script>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html">club <b>Coco</b> <span>admin</span></a>
+    <nav>
+              <a href="index.html">Overzicht</a>
+              <a href="kaart.html">Kaart</a>
+              <a href="uren.html">Openingsuren</a>
+              <a href="fotos.html" aria-current="page">Foto&#039;s</a>
+              <a href="teksten.html">Teksten &amp; gegevens</a>
+              <a href="account.html">Account</a>
+          </nav>
+    <div class="who">
+      <a href="../" target="_blank" rel="noopener">Bekijk site ↗</a>
+      <form method="post" action="login.html" data-demo-doel="login.html"><button class="linkbtn">Uitloggen</button></form>
+    </div>
+  </div>
+</header>
+<main class="page">
+<div class="page-head">
+  <div>
+    <h1>Foto's</h1>
+    <p>Voeg foto's toe of kies waar ze op de site komen. Een lager volgnummer staat eerst.</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Nieuwe foto</h2>
+  <form class="stack" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="actie" value="upload">
+    <label>Foto <span class="hint">JPG, PNG of WEBP, maximaal 8 MB</span>
+      <input type="file" name="foto" id="foto" accept="image/jpeg,image/png,image/webp" required>
+    </label>
+    <label>Wat staat erop? <span class="hint">Korte beschrijving voor blinden en Google, bv. "Cappuccino met latte art"</span>
+      <input type="text" name="alt" id="alt-nieuw" maxlength="255" required>
+    </label>
+    <div class="row">
+      <label>Plek op de site
+        <select name="plek" id="plek-nieuw">
+          <option value="galerij">Foto&#039;s-blok onderaan</option><option value="kaart">Boven de kaart (3 foto&#039;s)</option><option value="verhaal">Bij &quot;Ons verhaal&quot; (1 foto)</option>        </select>
+      </label>
+      <label>Grootte <span class="hint">enkel voor het foto's-blok</span>
+        <select name="formaat" id="formaat-nieuw">
+          <option value="normaal">Normaal</option><option value="breed">Groot (2×2)</option><option value="hoog">Hoog (1×2)</option>        </select>
+      </label>
+      <label>Label <span class="hint">enkel boven de kaart</span>
+        <input type="text" name="label" id="label-nieuw" maxlength="60" placeholder="bv. Huisgemaakte buns">
+      </label>
+    </div>
+    <div class="actions"><button class="btn" type="submit">Uploaden</button></div>
+  </form>
+</div>
+
+  <h2 style="margin-top:10px">Foto&#039;s-blok onderaan</h2>
+    <div class="photo-grid">
+        <div class="photo " id="foto-5">
+      <img src="../images/bar-avond.jpg" alt="De bar van club Coco &#039;s avonds, met het logo op de muur en de Rocket-espressomachine" loading="lazy">
+      <div class="body">
+        <form class="stack" method="post">
+                    <input type="hidden" name="id" value="5">
+          <label>Beschrijving <input type="text" name="alt" id="alt-5" value="De bar van club Coco &#039;s avonds, met het logo op de muur en de Rocket-espressomachine" maxlength="255"></label>
+          <div class="row">
+            <label>Plek
+              <select name="plek" id="plek-5">
+                <option value="galerij" selected>Galerij</option><option value="kaart" >Kaart</option><option value="verhaal" >Verhaal</option>              </select>
+            </label>
+            <label>Volgorde <input type="number" name="volgorde" id="volgorde-5" value="1" min="0" max="999"></label>
+          </div>
+                      <label>Grootte
+              <select name="formaat" id="formaat-5">
+                <option value="normaal" >Normaal</option><option value="breed" selected>Groot (2×2)</option><option value="hoog" >Hoog (1×2)</option>              </select>
+            </label>
+                                <input type="hidden" name="label" value="">
+                    <label class="check"><input type="checkbox" name="zichtbaar" id="zichtbaar-5" checked> Tonen op de site</label>
+          <div class="actions">
+            <button class="btn sm" name="actie" value="opslaan">Opslaan</button>
+            <button class="btn sm danger" name="actie" value="verwijder" formnovalidate
+              onclick="return this.dataset.zeker === '1' || (this.dataset.zeker = '1', this.textContent = 'Klik nog eens om te verwijderen', false)">Verwijderen</button>
+          </div>
+        </form>
+      </div>
+    </div>
+        <div class="photo " id="foto-6">
+      <img src="../images/gevel-raam.jpg" alt="Het raam van club Coco met schapenvachten en houten krukjes" loading="lazy">
+      <div class="body">
+        <form class="stack" method="post">
+                    <input type="hidden" name="id" value="6">
+          <label>Beschrijving <input type="text" name="alt" id="alt-6" value="Het raam van club Coco met schapenvachten en houten krukjes" maxlength="255"></label>
+          <div class="row">
+            <label>Plek
+              <select name="plek" id="plek-6">
+                <option value="galerij" selected>Galerij</option><option value="kaart" >Kaart</option><option value="verhaal" >Verhaal</option>              </select>
+            </label>
+            <label>Volgorde <input type="number" name="volgorde" id="volgorde-6" value="2" min="0" max="999"></label>
+          </div>
+                      <label>Grootte
+              <select name="formaat" id="formaat-6">
+                <option value="normaal" >Normaal</option><option value="breed" >Groot (2×2)</option><option value="hoog" selected>Hoog (1×2)</option>              </select>
+            </label>
+                                <input type="hidden" name="label" value="">
+                    <label class="check"><input type="checkbox" name="zichtbaar" id="zichtbaar-6" checked> Tonen op de site</label>
+          <div class="actions">
+            <button class="btn sm" name="actie" value="opslaan">Opslaan</button>
+            <button class="btn sm danger" name="actie" value="verwijder" formnovalidate
+              onclick="return this.dataset.zeker === '1' || (this.dataset.zeker = '1', this.textContent = 'Klik nog eens om te verwijderen', false)">Verwijderen</button>
+          </div>
+        </form>
+      </div>
+    </div>
+        <div class="photo " id="foto-7">
+      <img src="../images/menukaart.jpg" alt="De menukaart voor de gevel met het club Coco-logo" loading="lazy">
+      <div class="body">
+        <form class="stack" method="post">
+                    <input type="hidden" name="id" value="7">
+          <label>Beschrijving <input type="text" name="alt" id="alt-7" value="De menukaart voor de gevel met het club Coco-logo" maxlength="255"></label>
+          <div class="row">
+            <label>Plek
+              <select name="plek" id="plek-7">
+                <option value="galerij" selected>Galerij</option><option value="kaart" >Kaart</option><option value="verhaal" >Verhaal</option>              </select>
+            </label>
+            <label>Volgorde <input type="number" name="volgorde" id="volgorde-7" value="3" min="0" max="999"></label>
+          </div>
+                      <label>Grootte
+              <select name="formaat" id="formaat-7">
+                <option value="normaal" >Normaal</option><option value="breed" >Groot (2×2)</option><option value="hoog" selected>Hoog (1×2)</option>              </select>
+            </label>
+                                <input type="hidden" name="label" value="">
+                    <label class="check"><input type="checkbox" name="zichtbaar" id="zichtbaar-7" checked> Tonen op de site</label>
+          <div class="actions">
+            <button class="btn sm" name="actie" value="opslaan">Opslaan</button>
+            <button class="btn sm danger" name="actie" value="verwijder" formnovalidate
+              onclick="return this.dataset.zeker === '1' || (this.dataset.zeker = '1', this.textContent = 'Klik nog eens om te verwijderen', false)">Verwijderen</button>
+          </div>
+        </form>
+      </div>
+    </div>
+        <div class="photo " id="foto-8">
+      <img src="../images/cappuccino-menu.jpg" alt="Cappuccino en menukaart op een stalen tafeltje" loading="lazy">
+      <div class="body">
+        <form class="stack" method="post">
+                    <input type="hidden" name="id" value="8">
+          <label>Beschrijving <input type="text" name="alt" id="alt-8" value="Cappuccino en menukaart op een stalen tafeltje" maxlength="255"></label>
+          <div class="row">
+            <label>Plek
+              <select name="plek" id="plek-8">
+                <option value="galerij" selected>Galerij</option><option value="kaart" >Kaart</option><option value="verhaal" >Verhaal</option>              </select>
+            </label>
+            <label>Volgorde <input type="number" name="volgorde" id="volgorde-8" value="4" min="0" max="999"></label>
+          </div>
+                      <label>Grootte
+              <select name="formaat" id="formaat-8">
+                <option value="normaal" >Normaal</option><option value="breed" >Groot (2×2)</option><option value="hoog" selected>Hoog (1×2)</option>              </select>
+            </label>
+                                <input type="hidden" name="label" value="">
+                    <label class="check"><input type="checkbox" name="zichtbaar" id="zichtbaar-8" checked> Tonen op de site</label>
+          <div class="actions">
+            <button class="btn sm" name="actie" value="opslaan">Opslaan</button>
+            <button class="btn sm danger" name="actie" value="verwijder" formnovalidate
+              onclick="return this.dataset.zeker === '1' || (this.dataset.zeker = '1', this.textContent = 'Klik nog eens om te verwijderen', false)">Verwijderen</button>
+          </div>
+        </form>
+      </div>
+    </div>
+        <div class="photo " id="foto-9">
+      <img src="../images/bekers.jpg" alt="Stapels koffiebekers op de toog, met het logo op het raam" loading="lazy">
+      <div class="body">
+        <form class="stack" method="post">
+                    <input type="hidden" name="id" value="9">
+          <label>Beschrijving <input type="text" name="alt" id="alt-9" value="Stapels koffiebekers op de toog, met het logo op het raam" maxlength="255"></label>
+          <div class="row">
+            <label>Plek
+              <select name="plek" id="plek-9">
+                <option value="galerij" selected>Galerij</option><option value="kaart" >Kaart</option><option value="verhaal" >Verhaal</option>              </select>
+            </label>
+            <label>Volgorde <input type="number" name="volgorde" id="volgorde-9" value="5" min="0" max="999"></label>
+          </div>
+                      <label>Grootte
+              <select name="formaat" id="formaat-9">
+                <option value="normaal" >Normaal</option><option value="breed" >Groot (2×2)</option><option value="hoog" selected>Hoog (1×2)</option>              </select>
+            </label>
+                                <input type="hidden" name="label" value="">
+                    <label class="check"><input type="checkbox" name="zichtbaar" id="zichtbaar-9" checked> Tonen op de site</label>
+          <div class="actions">
+            <button class="btn sm" name="actie" value="opslaan">Opslaan</button>
+            <button class="btn sm danger" name="actie" value="verwijder" formnovalidate
+              onclick="return this.dataset.zeker === '1' || (this.dataset.zeker = '1', this.textContent = 'Klik nog eens om te verwijderen', false)">Verwijderen</button>
+          </div>
+        </form>
+      </div>
+    </div>
+        <div class="photo " id="foto-10">
+      <img src="../images/menu-tafel.jpg" alt="Menukaart op een stalen tafeltje naast de bordeaux tegels" loading="lazy">
+      <div class="body">
+        <form class="stack" method="post">
+                    <input type="hidden" name="id" value="10">
+          <label>Beschrijving <input type="text" name="alt" id="alt-10" value="Menukaart op een stalen tafeltje naast de bordeaux tegels" maxlength="255"></label>
+          <div class="row">
+            <label>Plek
+              <select name="plek" id="plek-10">
+                <option value="galerij" selected>Galerij</option><option value="kaart" >Kaart</option><option value="verhaal" >Verhaal</option>              </select>
+            </label>
+            <label>Volgorde <input type="number" name="volgorde" id="volgorde-10" value="6" min="0" max="999"></label>
+          </div>
+                      <label>Grootte
+              <select name="formaat" id="formaat-10">
+                <option value="normaal" >Normaal</option><option value="breed" selected>Groot (2×2)</option><option value="hoog" >Hoog (1×2)</option>              </select>
+            </label>
+                                <input type="hidden" name="label" value="">
+                    <label class="check"><input type="checkbox" name="zichtbaar" id="zichtbaar-10" checked> Tonen op de site</label>
+          <div class="actions">
+            <button class="btn sm" name="actie" value="opslaan">Opslaan</button>
+            <button class="btn sm danger" name="actie" value="verwijder" formnovalidate
+              onclick="return this.dataset.zeker === '1' || (this.dataset.zeker = '1', this.textContent = 'Klik nog eens om te verwijderen', false)">Verwijderen</button>
+          </div>
+        </form>
+      </div>
+    </div>
+      </div>
+    <h2 style="margin-top:10px">Boven de kaart (3 foto&#039;s)</h2>
+    <div class="photo-grid">
+        <div class="photo " id="foto-2">
+      <img src="../images/ontbijt.jpg" alt="Pancakes met banaan en rood fruit, en een bagel met zalm en avocado" loading="lazy">
+      <div class="body">
+        <form class="stack" method="post">
+                    <input type="hidden" name="id" value="2">
+          <label>Beschrijving <input type="text" name="alt" id="alt-2" value="Pancakes met banaan en rood fruit, en een bagel met zalm en avocado" maxlength="255"></label>
+          <div class="row">
+            <label>Plek
+              <select name="plek" id="plek-2">
+                <option value="galerij" >Galerij</option><option value="kaart" selected>Kaart</option><option value="verhaal" >Verhaal</option>              </select>
+            </label>
+            <label>Volgorde <input type="number" name="volgorde" id="volgorde-2" value="1" min="0" max="999"></label>
+          </div>
+                      <input type="hidden" name="formaat" value="normaal">
+                                <label>Label <input type="text" name="label" id="label-2" value="Ontbijt &amp; lunch" maxlength="60"></label>
+                    <label class="check"><input type="checkbox" name="zichtbaar" id="zichtbaar-2" checked> Tonen op de site</label>
+          <div class="actions">
+            <button class="btn sm" name="actie" value="opslaan">Opslaan</button>
+            <button class="btn sm danger" name="actie" value="verwijder" formnovalidate
+              onclick="return this.dataset.zeker === '1' || (this.dataset.zeker = '1', this.textContent = 'Klik nog eens om te verwijderen', false)">Verwijderen</button>
+          </div>
+        </form>
+      </div>
+    </div>
+        <div class="photo " id="foto-3">
+      <img src="../images/latte-art.jpg" alt="Cappuccino met latte art in een bordeaux kopje" loading="lazy">
+      <div class="body">
+        <form class="stack" method="post">
+                    <input type="hidden" name="id" value="3">
+          <label>Beschrijving <input type="text" name="alt" id="alt-3" value="Cappuccino met latte art in een bordeaux kopje" maxlength="255"></label>
+          <div class="row">
+            <label>Plek
+              <select name="plek" id="plek-3">
+                <option value="galerij" >Galerij</option><option value="kaart" selected>Kaart</option><option value="verhaal" >Verhaal</option>              </select>
+            </label>
+            <label>Volgorde <input type="number" name="volgorde" id="volgorde-3" value="2" min="0" max="999"></label>
+          </div>
+                      <input type="hidden" name="formaat" value="normaal">
+                                <label>Label <input type="text" name="label" id="label-3" value="Specialty coffee" maxlength="60"></label>
+                    <label class="check"><input type="checkbox" name="zichtbaar" id="zichtbaar-3" checked> Tonen op de site</label>
+          <div class="actions">
+            <button class="btn sm" name="actie" value="opslaan">Opslaan</button>
+            <button class="btn sm danger" name="actie" value="verwijder" formnovalidate
+              onclick="return this.dataset.zeker === '1' || (this.dataset.zeker = '1', this.textContent = 'Klik nog eens om te verwijderen', false)">Verwijderen</button>
+          </div>
+        </form>
+      </div>
+    </div>
+        <div class="photo " id="foto-4">
+      <img src="../images/buns.jpg" alt="Versgebakken cinnamon en kardemom buns op een bakplaat" loading="lazy">
+      <div class="body">
+        <form class="stack" method="post">
+                    <input type="hidden" name="id" value="4">
+          <label>Beschrijving <input type="text" name="alt" id="alt-4" value="Versgebakken cinnamon en kardemom buns op een bakplaat" maxlength="255"></label>
+          <div class="row">
+            <label>Plek
+              <select name="plek" id="plek-4">
+                <option value="galerij" >Galerij</option><option value="kaart" selected>Kaart</option><option value="verhaal" >Verhaal</option>              </select>
+            </label>
+            <label>Volgorde <input type="number" name="volgorde" id="volgorde-4" value="3" min="0" max="999"></label>
+          </div>
+                      <input type="hidden" name="formaat" value="normaal">
+                                <label>Label <input type="text" name="label" id="label-4" value="Huisgemaakte buns" maxlength="60"></label>
+                    <label class="check"><input type="checkbox" name="zichtbaar" id="zichtbaar-4" checked> Tonen op de site</label>
+          <div class="actions">
+            <button class="btn sm" name="actie" value="opslaan">Opslaan</button>
+            <button class="btn sm danger" name="actie" value="verwijder" formnovalidate
+              onclick="return this.dataset.zeker === '1' || (this.dataset.zeker = '1', this.textContent = 'Klik nog eens om te verwijderen', false)">Verwijderen</button>
+          </div>
+        </form>
+      </div>
+    </div>
+      </div>
+    <h2 style="margin-top:10px">Bij &quot;Ons verhaal&quot; (1 foto)</h2>
+    <div class="photo-grid">
+        <div class="photo " id="foto-1">
+      <img src="../images/interieur.jpg" alt="Interieur van club Coco met houten stoelen, stalen tafeltjes en een bank op bordeaux tegels" loading="lazy">
+      <div class="body">
+        <form class="stack" method="post">
+                    <input type="hidden" name="id" value="1">
+          <label>Beschrijving <input type="text" name="alt" id="alt-1" value="Interieur van club Coco met houten stoelen, stalen tafeltjes en een bank op bordeaux tegels" maxlength="255"></label>
+          <div class="row">
+            <label>Plek
+              <select name="plek" id="plek-1">
+                <option value="galerij" >Galerij</option><option value="kaart" >Kaart</option><option value="verhaal" selected>Verhaal</option>              </select>
+            </label>
+            <label>Volgorde <input type="number" name="volgorde" id="volgorde-1" value="1" min="0" max="999"></label>
+          </div>
+                      <input type="hidden" name="formaat" value="normaal">
+                                <input type="hidden" name="label" value="">
+                    <label class="check"><input type="checkbox" name="zichtbaar" id="zichtbaar-1" checked> Tonen op de site</label>
+          <div class="actions">
+            <button class="btn sm" name="actie" value="opslaan">Opslaan</button>
+            <button class="btn sm danger" name="actie" value="verwijder" formnovalidate
+              onclick="return this.dataset.zeker === '1' || (this.dataset.zeker = '1', this.textContent = 'Klik nog eens om te verwijderen', false)">Verwijderen</button>
+          </div>
+        </form>
+      </div>
+    </div>
+      </div>
+  </main>
+</body>
+</html>

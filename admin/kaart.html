@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kaart · club Coco admin</title>
+<link rel="icon" href="../images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Figtree:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+<div class="demo-bar" role="note">DEMO · dit is een voorbeeld op GitHub Pages: wijzigingen worden niet opgeslagen</div>
+<style>
+.demo-bar{position:sticky;top:0;z-index:999;background:#fbe7a6;color:#3b0d13;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:7px 12px}
+.demo-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:1000;background:#3b0d13;color:#fff;font:500 14px/1.4 system-ui,sans-serif;padding:12px 18px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.3);max-width:calc(100% - 32px)}
+</style>
+<script>
+document.addEventListener('submit', function (e) {
+  var f = e.target, doel = f.getAttribute('data-demo-doel');
+  e.preventDefault();
+  if (doel) { location.href = doel; return; }
+  var t = document.querySelector('.demo-toast') || document.body.appendChild(document.createElement('div'));
+  t.className = 'demo-toast';
+  t.textContent = 'Demo: opslaan werkt pas als de site op echte PHP-hosting staat.';
+  clearTimeout(t._t); t._t = setTimeout(function () { t.remove(); }, 3500);
+});
+</script>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html">club <b>Coco</b> <span>admin</span></a>
+    <nav>
+              <a href="index.html">Overzicht</a>
+              <a href="kaart.html" aria-current="page">Kaart</a>
+              <a href="uren.html">Openingsuren</a>
+              <a href="fotos.html">Foto&#039;s</a>
+              <a href="teksten.html">Teksten &amp; gegevens</a>
+              <a href="account.html">Account</a>
+          </nav>
+    <div class="who">
+      <a href="../" target="_blank" rel="noopener">Bekijk site ↗</a>
+      <form method="post" action="login.html" data-demo-doel="login.html"><button class="linkbtn">Uitloggen</button></form>
+    </div>
+  </div>
+</header>
+<main class="page">
+<div class="page-head">
+  <div>
+    <h1>Kaart</h1>
+    <p>Klik op ✎ om een naam of prijs aan te passen. Met ♥ duid je een favoriet aan, met 👁 verberg je iets tijdelijk (bv. als het op is).</p>
+  </div>
+  <div class="actions">
+    <a class="btn light" href="categorie.html">+ Nieuwe categorie</a>
+  </div>
+</div>
+
+      <h2 class="muted small" style="margin-top:8px">Kolom 1 op de site</h2>
+    <section class="card cat-card" id="cat-1">
+  <div class="cat-top">
+    <h2>Specialty coffee      <span class="meta">7 items</span>
+          </h2>
+    <div class="tools">
+      <form class="inline" method="post"><input type="hidden" name="id" value="1">
+        <button class="iconbtn" name="actie" value="cat_omhoog" title="Categorie omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="cat_omlaag" title="Categorie omlaag" >↓</button>
+      </form>
+      <a class="btn sm light" href="categorie-1.html">Categorie bewerken</a>
+      <a class="btn sm" href="item-nieuw-1.html">+ Item</a>
+    </div>
+  </div>
+
+    <ul class="items">
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="1">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Espresso (dubbel)                      </div>
+      <span class="prijs">€ 3,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="1">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-1.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="2">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        <span style="color:var(--bordeaux)">♥</span> Americano                      </div>
+      <span class="prijs">€ 3,40</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="2">
+        <button class="iconbtn fav-on" name="actie" value="fav" title="Geen favoriet meer">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-2.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="3">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Filter                      </div>
+      <span class="prijs">€ 4,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="3">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-3.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="4">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Cortado                      </div>
+      <span class="prijs">€ 3,60</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="4">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-4.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="5">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Cappuccino                      </div>
+      <span class="prijs">€ 4,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="5">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-5.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="6">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        <span style="color:var(--bordeaux)">♥</span> Flat white                      </div>
+      <span class="prijs">€ 4,80</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="6">
+        <button class="iconbtn fav-on" name="actie" value="fav" title="Geen favoriet meer">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-6.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="7">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" disabled>↓</button>
+      </form>
+      <div class="naam">
+        Latte macchiato                      </div>
+      <span class="prijs">€ 4,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="7">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-7.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+      </ul>
+  </section>
+<section class="card cat-card" id="cat-2">
+  <div class="cat-top">
+    <h2>Extra&#039;s      <span class="meta">5 items</span>
+          </h2>
+    <div class="tools">
+      <form class="inline" method="post"><input type="hidden" name="id" value="2">
+        <button class="iconbtn" name="actie" value="cat_omhoog" title="Categorie omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="cat_omlaag" title="Categorie omlaag" >↓</button>
+      </form>
+      <a class="btn sm light" href="categorie-2.html">Categorie bewerken</a>
+      <a class="btn sm" href="item-nieuw-2.html">+ Item</a>
+    </div>
+  </div>
+
+    <ul class="items">
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="8">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Kannetje koemelk                      </div>
+      <span class="prijs">€ +0,30</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="8">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-8.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="9">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Plantaardige melk                <small>haver · kokos · soya · amandel ♥</small>      </div>
+      <span class="prijs">€ +0,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="9">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-9.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="10">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Iced                      </div>
+      <span class="prijs">€ +0,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="10">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-10.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="11">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Vanille                      </div>
+      <span class="prijs">€ +1,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="11">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-11.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="12">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" disabled>↓</button>
+      </form>
+      <div class="naam">
+        Caramel                      </div>
+      <span class="prijs">€ +1,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="12">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-12.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+      </ul>
+  </section>
+<section class="card cat-card" id="cat-3">
+  <div class="cat-top">
+    <h2>Chai latte &amp; matcha      <span class="meta">4 items</span>
+          </h2>
+    <div class="tools">
+      <form class="inline" method="post"><input type="hidden" name="id" value="3">
+        <button class="iconbtn" name="actie" value="cat_omhoog" title="Categorie omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="cat_omlaag" title="Categorie omlaag" >↓</button>
+      </form>
+      <a class="btn sm light" href="categorie-3.html">Categorie bewerken</a>
+      <a class="btn sm" href="item-nieuw-3.html">+ Item</a>
+    </div>
+  </div>
+
+    <ul class="items">
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="13">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Chai latte massala                      </div>
+      <span class="prijs">€ 4,60</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="13">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-13.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="14">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Chai latte unsweetened                      </div>
+      <span class="prijs">€ 4,60</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="14">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-14.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="15">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Matcha latte                      </div>
+      <span class="prijs">€ 5,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="15">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-15.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="16">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" disabled>↓</button>
+      </form>
+      <div class="naam">
+        <span style="color:var(--bordeaux)">♥</span> Matcha Coco                <small>iced met kokosmelk en mangopuree</small>      </div>
+      <span class="prijs">€ 6,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="16">
+        <button class="iconbtn fav-on" name="actie" value="fav" title="Geen favoriet meer">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-16.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+      </ul>
+  </section>
+<section class="card cat-card" id="cat-4">
+  <div class="cat-top">
+    <h2>Verse thee      <span class="meta">6 items</span>
+          </h2>
+    <div class="tools">
+      <form class="inline" method="post"><input type="hidden" name="id" value="4">
+        <button class="iconbtn" name="actie" value="cat_omhoog" title="Categorie omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="cat_omlaag" title="Categorie omlaag" disabled>↓</button>
+      </form>
+      <a class="btn sm light" href="categorie-4.html">Categorie bewerken</a>
+      <a class="btn sm" href="item-nieuw-4.html">+ Item</a>
+    </div>
+  </div>
+
+    <ul class="items">
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="17">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Earl grey                      </div>
+      <span class="prijs">€ 3,40</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="17">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-17.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="18">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Groene thee                      </div>
+      <span class="prijs">€ 3,40</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="18">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-18.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="19">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Kamille                      </div>
+      <span class="prijs">€ 3,40</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="19">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-19.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="20">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        <span style="color:var(--bordeaux)">♥</span> Rode vruchtenmix                      </div>
+      <span class="prijs">€ 3,40</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="20">
+        <button class="iconbtn fav-on" name="actie" value="fav" title="Geen favoriet meer">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-20.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="21">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Verse munt                      </div>
+      <span class="prijs">€ 4,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="21">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-21.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="22">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" disabled>↓</button>
+      </form>
+      <div class="naam">
+        <span style="color:var(--bordeaux)">♥</span> Verse gemberthee                      </div>
+      <span class="prijs">€ 4,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="22">
+        <button class="iconbtn fav-on" name="actie" value="fav" title="Geen favoriet meer">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-22.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+      </ul>
+  </section>
+      <h2 class="muted small" style="margin-top:8px">Kolom 2 op de site</h2>
+    <section class="card cat-card" id="cat-5">
+  <div class="cat-top">
+    <h2>Warme chocomelk      <span class="meta">3 items</span>
+          </h2>
+    <div class="tools">
+      <form class="inline" method="post"><input type="hidden" name="id" value="5">
+        <button class="iconbtn" name="actie" value="cat_omhoog" title="Categorie omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="cat_omlaag" title="Categorie omlaag" >↓</button>
+      </form>
+      <a class="btn sm light" href="categorie-5.html">Categorie bewerken</a>
+      <a class="btn sm" href="item-nieuw-5.html">+ Item</a>
+    </div>
+  </div>
+
+    <ul class="items">
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="23">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Melkchocolade                      </div>
+      <span class="prijs">€ 4,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="23">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-23.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="24">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Pure chocolade                      </div>
+      <span class="prijs">€ 4,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="24">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-24.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="25">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" disabled>↓</button>
+      </form>
+      <div class="naam">
+        Slagroom                      </div>
+      <span class="prijs">€ +1,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="25">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-25.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+      </ul>
+  </section>
+<section class="card cat-card" id="cat-6">
+  <div class="cat-top">
+    <h2>Homemade ice tea      <span class="meta">3 items</span>
+          </h2>
+    <div class="tools">
+      <form class="inline" method="post"><input type="hidden" name="id" value="6">
+        <button class="iconbtn" name="actie" value="cat_omhoog" title="Categorie omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="cat_omlaag" title="Categorie omlaag" >↓</button>
+      </form>
+      <a class="btn sm light" href="categorie-6.html">Categorie bewerken</a>
+      <a class="btn sm" href="item-nieuw-6.html">+ Item</a>
+    </div>
+  </div>
+
+    <ul class="items">
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="26">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        <span style="color:var(--bordeaux)">♥</span> Framboos – zwarte thee                      </div>
+      <span class="prijs">€ 4,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="26">
+        <button class="iconbtn fav-on" name="actie" value="fav" title="Geen favoriet meer">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-26.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="27">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Granaatappel – munt                      </div>
+      <span class="prijs">€ 4,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="27">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-27.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="28">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" disabled>↓</button>
+      </form>
+      <div class="naam">
+        Cold brewed tea – rode vruchten                      </div>
+      <span class="prijs">€ 4,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="28">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-28.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+      </ul>
+  </section>
+<section class="card cat-card" id="cat-7">
+  <div class="cat-top">
+    <h2>Homemade lemonades      <span class="meta">2 items</span>
+          </h2>
+    <div class="tools">
+      <form class="inline" method="post"><input type="hidden" name="id" value="7">
+        <button class="iconbtn" name="actie" value="cat_omhoog" title="Categorie omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="cat_omlaag" title="Categorie omlaag" >↓</button>
+      </form>
+      <a class="btn sm light" href="categorie-7.html">Categorie bewerken</a>
+      <a class="btn sm" href="item-nieuw-7.html">+ Item</a>
+    </div>
+  </div>
+
+    <ul class="items">
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="29">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Gember – citroen                      </div>
+      <span class="prijs">€ 4,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="29">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-29.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="30">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" disabled>↓</button>
+      </form>
+      <div class="naam">
+        Vlierbloesem – citroen                      </div>
+      <span class="prijs">€ 4,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="30">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-30.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+      </ul>
+  </section>
+<section class="card cat-card" id="cat-8">
+  <div class="cat-top">
+    <h2>Cava &amp; wijn      <span class="meta">5 items</span>
+          </h2>
+    <div class="tools">
+      <form class="inline" method="post"><input type="hidden" name="id" value="8">
+        <button class="iconbtn" name="actie" value="cat_omhoog" title="Categorie omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="cat_omlaag" title="Categorie omlaag" >↓</button>
+      </form>
+      <a class="btn sm light" href="categorie-8.html">Categorie bewerken</a>
+      <a class="btn sm" href="item-nieuw-8.html">+ Item</a>
+    </div>
+  </div>
+
+    <ul class="items">
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="31">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        <span style="color:var(--bordeaux)">♥</span> Cava                <small>GM Brut · glas / fles</small>      </div>
+      <span class="prijs">€ 7,90 / 32</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="31">
+        <button class="iconbtn fav-on" name="actie" value="fav" title="Geen favoriet meer">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-31.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="32">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Witte wijn                <small>glas / fles</small>      </div>
+      <span class="prijs">€ 6,90 / 32</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="32">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-32.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="33">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        <span style="color:var(--bordeaux)">♥</span> Rode wijn                <small>glas / fles</small>      </div>
+      <span class="prijs">—</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="33">
+        <button class="iconbtn fav-on" name="actie" value="fav" title="Geen favoriet meer">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-33.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="34">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Rosé                <small>Ilagares, Spaans 2025 · glas / fles</small>      </div>
+      <span class="prijs">—</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="34">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-34.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="35">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" disabled>↓</button>
+      </form>
+      <div class="naam">
+        Oranje wijn                <small>Materia Prima Orange 2025 · glas / fles</small>      </div>
+      <span class="prijs">€ 9 / 45</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="35">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-35.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+      </ul>
+  </section>
+<section class="card cat-card" id="cat-9">
+  <div class="cat-top">
+    <h2>Bieren      <span class="meta">5 items</span>
+          </h2>
+    <div class="tools">
+      <form class="inline" method="post"><input type="hidden" name="id" value="9">
+        <button class="iconbtn" name="actie" value="cat_omhoog" title="Categorie omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="cat_omlaag" title="Categorie omlaag" disabled>↓</button>
+      </form>
+      <a class="btn sm light" href="categorie-9.html">Categorie bewerken</a>
+      <a class="btn sm" href="item-nieuw-9.html">+ Item</a>
+    </div>
+  </div>
+
+    <ul class="items">
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="36">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Stella – Stella 0%                      </div>
+      <span class="prijs">€ 3,20</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="36">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-36.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="37">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Fourchette                      </div>
+      <span class="prijs">€ 5,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="37">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-37.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="38">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Liefmans – Liefmans 0%                      </div>
+      <span class="prijs">€ 3,90</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="38">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-38.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="39">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Triple d&#039;Anvers                      </div>
+      <span class="prijs">€ 4,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="39">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-39.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="40">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" disabled>↓</button>
+      </form>
+      <div class="naam">
+        Duvel                      </div>
+      <span class="prijs">€ 4,80</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="40">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-40.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+      </ul>
+  </section>
+      <h2 class="muted small" style="margin-top:8px">Kolom 3 op de site</h2>
+    <section class="card cat-card" id="cat-10">
+  <div class="cat-top">
+    <h2>Frisdranken      <span class="meta">12 items</span>
+          </h2>
+    <div class="tools">
+      <form class="inline" method="post"><input type="hidden" name="id" value="10">
+        <button class="iconbtn" name="actie" value="cat_omhoog" title="Categorie omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="cat_omlaag" title="Categorie omlaag" >↓</button>
+      </form>
+      <a class="btn sm light" href="categorie-10.html">Categorie bewerken</a>
+      <a class="btn sm" href="item-nieuw-10.html">+ Item</a>
+    </div>
+  </div>
+
+    <ul class="items">
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="41">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Plat water – bruis water                      </div>
+      <span class="prijs">€ 3,20</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="41">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-41.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="42">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Chaudfontaine 0,5 L                      </div>
+      <span class="prijs">€ 5,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="42">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-42.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="43">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Coco Cola – Cola zero                      </div>
+      <span class="prijs">€ 3,20</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="43">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-43.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="44">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Lipton Ice Tea – Ice Tea Green                      </div>
+      <span class="prijs">€ 3,20</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="44">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-44.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="45">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        <span style="color:var(--bordeaux)">♥</span> Vers appelsap                      </div>
+      <span class="prijs">€ 3,90</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="45">
+        <button class="iconbtn fav-on" name="actie" value="fav" title="Geen favoriet meer">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-45.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="46">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Vers appelsiensap                      </div>
+      <span class="prijs">€ 3,90</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="46">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-46.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="47">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Almdudler                      </div>
+      <span class="prijs">€ 4,60</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="47">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-47.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="48">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Jarr kombucha peach – yuzu                      </div>
+      <span class="prijs">€ 4,60</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="48">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-48.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="49">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Jarr kombucha ginger lemon                      </div>
+      <span class="prijs">€ 4,60</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="49">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-49.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="50">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Big Tom tomatensap                      </div>
+      <span class="prijs">€ 4,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="50">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-50.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="51">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Schweppes Selection Tonic                      </div>
+      <span class="prijs">€ 3,40</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="51">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-51.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="52">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" disabled>↓</button>
+      </form>
+      <div class="naam">
+        Schweppes Ginger Beer – chili                      </div>
+      <span class="prijs">€ 3,40</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="52">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-52.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+      </ul>
+  </section>
+<section class="card cat-card" id="cat-11">
+  <div class="cat-top">
+    <h2>Pastries &amp; snacks      <span class="meta">6 items</span>
+          </h2>
+    <div class="tools">
+      <form class="inline" method="post"><input type="hidden" name="id" value="11">
+        <button class="iconbtn" name="actie" value="cat_omhoog" title="Categorie omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="cat_omlaag" title="Categorie omlaag" >↓</button>
+      </form>
+      <a class="btn sm light" href="categorie-11.html">Categorie bewerken</a>
+      <a class="btn sm" href="item-nieuw-11.html">+ Item</a>
+    </div>
+  </div>
+
+    <ul class="items">
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="53">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" disabled>↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Croissant                      </div>
+      <span class="prijs">€ 3,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="53">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-53.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="54">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Croissant confituur                      </div>
+      <span class="prijs">€ 4,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="54">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-54.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="55">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Chocoladebroodje                      </div>
+      <span class="prijs">€ 3,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="55">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-55.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="56">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        Cinnamon bun                      </div>
+      <span class="prijs">€ 4,50</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="56">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-56.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="57">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" >↓</button>
+      </form>
+      <div class="naam">
+        <span style="color:var(--bordeaux)">♥</span> Kardemom bun                      </div>
+      <span class="prijs">€ 5,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="57">
+        <button class="iconbtn fav-on" name="actie" value="fav" title="Geen favoriet meer">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-57.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+        <li class="">
+      <form class="move" method="post"><input type="hidden" name="id" value="58">
+        <button class="iconbtn" name="actie" value="omhoog" title="Omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="omlaag" title="Omlaag" disabled>↓</button>
+      </form>
+      <div class="naam">
+        Chocolade bun                      </div>
+      <span class="prijs">€ 5,00</span>
+      <form class="tools" method="post"><input type="hidden" name="id" value="58">
+        <button class="iconbtn " name="actie" value="fav" title="Maak favoriet">♥</button>
+        <button class="iconbtn" name="actie" value="zichtbaar" title="Verbergen">👁</button>
+        <a class="iconbtn" href="item-58.html" title="Bewerken">✎</a>
+      </form>
+    </li>
+      </ul>
+  </section>
+<section class="card cat-card" id="cat-12">
+  <div class="cat-top">
+    <h2>Ontbijt &amp; lunch      <span class="meta">0 items</span>
+          </h2>
+    <div class="tools">
+      <form class="inline" method="post"><input type="hidden" name="id" value="12">
+        <button class="iconbtn" name="actie" value="cat_omhoog" title="Categorie omhoog" >↑</button>
+        <button class="iconbtn" name="actie" value="cat_omlaag" title="Categorie omlaag" disabled>↓</button>
+      </form>
+      <a class="btn sm light" href="categorie-12.html">Categorie bewerken</a>
+      <a class="btn sm" href="item-nieuw-12.html">+ Item</a>
+    </div>
+  </div>
+
+      <p class="muted" style="padding:14px 18px">Ons ontbijt- en lunchmenu staat binnenkort online.</p>
+  </section>
+</main>
+</body>
+</html>

@@ -26,6 +26,23 @@ database/schema.sql   tabellen + de echte kaart als startdata
 5. Surf naar http://localhost/club-coco-website/admin/ en maak het eerste account aan.
 6. De site zelf: http://localhost/club-coco-website/
 
+## Demo op GitHub Pages (zolang er nog geen hosting is)
+
+GitHub Pages kan geen PHP of MySQL draaien. Daarom staat er een statische demo:
+`index.html` (de site) en `admin/*.html` (alle adminpagina's, opslaan werkt niet).
+
+- Site: https://annabelxoxo.github.io/club-coco-website/
+- Admin: https://annabelxoxo.github.io/club-coco-website/admin/login.html (inloggen met eender wat)
+
+Iets aangepast aan de PHP-code of `schema.sql`? Start MySQL in XAMPP en maak de demo opnieuw:
+
+```
+php tools/maak-demo.php
+```
+
+Op echte hosting toont `.htaccess` altijd de PHP-versie en stuurt `admin/*.html` door naar
+de echte admin. Je mag de demo-bestanden daar dus laten staan of wissen.
+
 ## Online zetten (bv. Combell, one.com, Hostinger)
 
 1. Maak bij je host een MySQL-database aan en importeer `database/schema.sql` via phpMyAdmin.
