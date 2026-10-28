@@ -433,31 +433,31 @@
     <div>
       <p class="eyebrow">Openingsuren</p>
       <table class="hours"><tbody>
-                  <tr>
+                  <tr data-d="1">
             <td>Maandag</td>
             <td>08:00 – 17:00</td>
           </tr>
-                  <tr>
+                  <tr data-d="2">
             <td>Dinsdag</td>
             <td>08:00 – 17:00</td>
           </tr>
-                  <tr class="today">
+                  <tr data-d="3">
             <td>Woensdag</td>
             <td>08:00 – 17:00</td>
           </tr>
-                  <tr>
+                  <tr data-d="4">
             <td>Donderdag</td>
             <td>08:00 – 17:00</td>
           </tr>
-                  <tr>
+                  <tr data-d="5">
             <td>Vrijdag</td>
             <td>08:00 – 17:00</td>
           </tr>
-                  <tr>
+                  <tr data-d="6">
             <td>Zaterdag</td>
             <td>09:00 – 16:00</td>
           </tr>
-                  <tr>
+                  <tr data-d="0">
             <td>Zondag</td>
             <td>Gesloten</td>
           </tr>
@@ -484,5 +484,13 @@
   </div>
 </footer>
 
+<script>
+// "vandaag" volgens de bezoeker; nodig voor de statische demo (en gecachte pagina's)
+(function(){
+  var rij=document.querySelector('.hours tr[data-d="'+new Date().getDay()+'"]'); if(!rij) return;
+  document.querySelectorAll('.hours tr.today').forEach(function(tr){tr.classList.remove('today');});
+  rij.classList.add('today');
+})();
+</script>
 </body>
 </html>

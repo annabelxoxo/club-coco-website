@@ -187,7 +187,7 @@ $vandaag    = (int) date('w');
       <p class="eyebrow">Openingsuren</p>
       <table class="hours"><tbody>
         <?php foreach ($uren as $nr => $dag): ?>
-          <tr<?= $nr === $vandaag ? ' class="today"' : '' ?>>
+          <tr data-d="<?= $nr ?>"<?= $nr === $vandaag ? ' class="today"' : '' ?>>
             <td><?= h($dag['naam']) ?></td>
             <td><?= $dag['gesloten'] ? 'Gesloten' : h(tijd($dag['open']) . ' – ' . tijd($dag['sluit'])) ?></td>
           </tr>
@@ -215,5 +215,13 @@ $vandaag    = (int) date('w');
   </div>
 </footer>
 
+<script>
+// "vandaag" volgens de bezoeker; nodig voor de statische demo (en gecachte pagina's)
+(function(){
+  var rij=document.querySelector('.hours tr[data-d="'+new Date().getDay()+'"]'); if(!rij) return;
+  document.querySelectorAll('.hours tr.today').forEach(function(tr){tr.classList.remove('today');});
+  rij.classList.add('today');
+})();
+</script>
 </body>
 </html>
