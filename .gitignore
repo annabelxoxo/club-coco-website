@@ -1,0 +1,13 @@
+# Wachtwoorden en lokale instellingen
+config.php
+
+# Foto's die via admin geüpload worden (die staan op de server, niet in git)
+uploads/*
+!uploads/.htaccess
+!uploads/.gitkeep
+
+.DS_Store
+Thumbs.db
+
+# Oude bestanden (mag je zelf wissen)
+_oud/

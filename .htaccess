@@ -1,0 +1,14 @@
+# club Coco – beveiliging (Apache, werkt bij de meeste Belgische hosts)
+
+# Geen mappenlijst tonen
+Options -Indexes
+
+# Geheime bestanden nooit tonen
+<FilesMatch "^(config\.php|config\.sample\.php|\.env|.*\.sql|.*\.md|\.git.*)$">
+  Require all denied
+</FilesMatch>
+
+# Zet op HTTPS. Haal het hekje (#) weg zodra je SSL-certificaat actief is.
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
