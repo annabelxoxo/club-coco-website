@@ -36,6 +36,8 @@ $vandaag    = (int) date('w');
 </head>
 <body>
 
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+
 <?php if ($melding !== ''): ?>
 <div class="melding"><div class="wrap"><?= h($melding) ?></div></div>
 <?php endif; ?>
@@ -52,6 +54,8 @@ $vandaag    = (int) date('w');
   </div>
 </nav>
 
+<main id="inhoud">
+
 <header class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
@@ -63,7 +67,7 @@ $vandaag    = (int) date('w');
       <p class="lead"><?= h(setting('hero_tekst')) ?></p>
       <div class="cta-row">
         <?php if ($reserveUrl): ?>
-          <a class="btn" href="<?= h($reserveUrl) ?>" target="_blank" rel="noopener">Reserveer een tafel</a>
+          <a class="btn" href="<?= h($reserveUrl) ?>" target="_blank" rel="noopener">Reserveer een tafel<span class="sr-only"> (opent in nieuw venster)</span></a>
         <?php else: ?>
           <a class="btn" href="#bezoek">Kom langs</a>
         <?php endif; ?>
@@ -99,7 +103,7 @@ $vandaag    = (int) date('w');
       <div>
         <p class="eyebrow">Wat we schenken</p>
         <h2>De kaart</h2>
-        <p><?= h(setting('kaart_intro')) ?></p>
+        <p><?= str_replace('♥', '<span class="heart" aria-hidden="true">♥</span><span class="sr-only">hartje</span>', h(setting('kaart_intro'))) ?></p>
         <?php if ($pastry !== ''): ?>
           <p class="pastry-week"><b>Pastry van de week</b> <?= h($pastry) ?></p>
         <?php endif; ?>
@@ -126,12 +130,12 @@ $vandaag    = (int) date('w');
           <?php foreach ($cat['items'] as $item): ?>
             <div class="item">
               <span>
-                <?php if ($item['favoriet']): ?><span class="heart" title="Favoriet van het huis">♥</span> <?php endif; ?>
+                <?php if ($item['favoriet']): ?><span class="heart" aria-hidden="true">♥</span><span class="sr-only">Favoriet van het huis:</span> <?php endif; ?>
                 <?= h($item['naam']) ?>
                 <?php if ($item['beschrijving']): ?><small><?= h($item['beschrijving']) ?></small><?php endif; ?>
               </span>
               <?php if ($item['prijs'] !== null && $item['prijs'] !== ''): ?>
-                <span class="price"><?= h($item['prijs']) ?></span>
+                <span class="price"><?= h($item['prijs']) ?><span class="sr-only"> euro</span></span>
               <?php endif; ?>
             </div>
           <?php endforeach; ?>
@@ -143,7 +147,7 @@ $vandaag    = (int) date('w');
       </div>
       <?php endforeach; ?>
     </div>
-    <p class="note">Onze koffie is specialty coffee van <a href="https://www.crossroast.be/" target="_blank" rel="noopener"><strong>Crossroast</strong></a>.</p>
+    <p class="note">Onze koffie is specialty coffee van <a href="https://www.crossroast.be/" target="_blank" rel="noopener"><strong>Crossroast</strong><span class="sr-only"> (opent in nieuw venster)</span></a>.</p>
   </div>
 </section>
 
@@ -171,9 +175,9 @@ $vandaag    = (int) date('w');
       <h2>Kom langs in Kapellen</h2>
       <p class="addr"><?= h($straat) ?><br><?= h($gemeente) ?></p>
       <div class="cta-row">
-        <a class="btn" href="<?= h($routeUrl) ?>" target="_blank" rel="noopener">Route plannen</a>
+        <a class="btn" href="<?= h($routeUrl) ?>" target="_blank" rel="noopener">Route plannen<span class="sr-only"> (opent in nieuw venster)</span></a>
         <?php if ($reserveUrl): ?>
-          <a class="btn outline" href="<?= h($reserveUrl) ?>" target="_blank" rel="noopener">Reserveer een tafel</a>
+          <a class="btn outline" href="<?= h($reserveUrl) ?>" target="_blank" rel="noopener">Reserveer een tafel<span class="sr-only"> (opent in nieuw venster)</span></a>
         <?php endif; ?>
       </div>
       <?php if ($email || $telefoon): ?>
@@ -188,7 +192,7 @@ $vandaag    = (int) date('w');
       <table class="hours"><tbody>
         <?php foreach ($uren as $nr => $dag): ?>
           <tr data-d="<?= $nr ?>"<?= $nr === $vandaag ? ' class="today"' : '' ?>>
-            <td><?= h($dag['naam']) ?></td>
+            <td><?= h($dag['naam']) ?><?= $nr === $vandaag ? '<span class="sr-only vandaag"> (vandaag)</span>' : '' ?></td>
             <td><?= $dag['gesloten'] ? 'Gesloten' : h(tijd($dag['open']) . ' – ' . tijd($dag['sluit'])) ?></td>
           </tr>
         <?php endforeach; ?>
@@ -203,9 +207,11 @@ $vandaag    = (int) date('w');
       <h2>Volg de club</h2>
       <p>Pastry van de week, nieuwe drankjes en sfeerbeelden: alles staat eerst op Instagram.</p>
     </div>
-    <a class="btn" href="https://www.instagram.com/<?= h($instagram) ?>" target="_blank" rel="noopener">@<?= h($instagram) ?></a>
+    <a class="btn" href="https://www.instagram.com/<?= h($instagram) ?>" target="_blank" rel="noopener">@<?= h($instagram) ?><span class="sr-only"> (opent in nieuw venster)</span></a>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">
@@ -220,7 +226,9 @@ $vandaag    = (int) date('w');
 (function(){
   var rij=document.querySelector('.hours tr[data-d="'+new Date().getDay()+'"]'); if(!rij) return;
   document.querySelectorAll('.hours tr.today').forEach(function(tr){tr.classList.remove('today');});
+  document.querySelectorAll('.hours .vandaag').forEach(function(el){el.remove();});
   rij.classList.add('today');
+  rij.cells[0].insertAdjacentHTML('beforeend','<span class="sr-only vandaag"> (vandaag)</span>');
 })();
 </script>
 </body>
