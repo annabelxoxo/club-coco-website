@@ -90,15 +90,15 @@ INSERT INTO categories (id, naam, kolom, volgorde, notitie) VALUES
  (1,  'Specialty coffee',     1, 1, NULL),
  (2,  'Extra''s',             1, 2, NULL),
  (3,  'Chai latte & matcha',  1, 3, NULL),
- (4,  'Verse thee',           1, 4, NULL),
- (5,  'Warme chocomelk',      2, 1, NULL),
+ (5,  'Warme chocomelk',      1, 4, NULL),
+ (4,  'Verse thee',           2, 1, NULL),
  (6,  'Homemade ice tea',     2, 2, NULL),
  (7,  'Homemade lemonades',   2, 3, NULL),
- (8,  'Cava & wijn',          2, 4, NULL),
- (9,  'Bieren',               2, 5, NULL),
+ (11, 'Pastries & snacks',    2, 4, NULL),
+ (12, 'Ontbijt & lunch',      2, 5, 'Ons ontbijt- en lunchmenu staat binnenkort online.'),
  (10, 'Frisdranken',          3, 1, NULL),
- (11, 'Pastries & snacks',    3, 2, NULL),
- (12, 'Ontbijt & lunch',      3, 3, 'Ons ontbijt- en lunchmenu staat binnenkort online.');
+ (8,  'Cava & wijn',          3, 2, NULL),
+ (9,  'Bieren',               3, 3, NULL);
 
 INSERT INTO menu_items (category_id, naam, beschrijving, prijs, favoriet, volgorde) VALUES
  (1, 'Espresso (dubbel)', NULL, '3,00', 0, 1),

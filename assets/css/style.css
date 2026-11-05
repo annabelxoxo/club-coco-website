@@ -1,5 +1,5 @@
 /* club Coco – publieke site
-   Layout: lilac logo-hero, bordeaux tile strips as dividers, a brushed-steel round "tafel" as menu badge, real photos from opening day */
+   Layout: lilac logo-hero, bordeaux tile strips as dividers, the mascot as menu badge, real photos from opening day */
 :root{
   --bg:#fbf8f5;
   --surface:#ffffff;
@@ -105,17 +105,13 @@ nav ul a:hover{text-decoration:underline;text-underline-offset:4px}
 .menu-head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;margin-bottom:40px}
 .menu-head>*{min-width:0}
 .menu-head p{max-width:46ch;color:var(--muted);margin:14px 0 0}
-.steel{width:clamp(130px,18vw,170px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;
-  background:repeating-radial-gradient(circle at 50% 50%,#d7d9dc 0 1px,#b8bbc0 1px 2px,#cfd2d6 2px 3px),#c6c9cd;
-  box-shadow:inset 0 2px 6px rgba(255,255,255,.6),inset 0 -6px 12px rgba(0,0,0,.18),0 10px 24px -10px rgba(0,0,0,.4);
-  color:#3b0d13;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;line-height:1.3;padding:16px}
-.steel b{display:block;font-family:var(--display);font-weight:400;font-size:1.5rem;letter-spacing:0;text-transform:none;color:#6d121c}
-@media (max-width:560px){.menu-head{grid-template-columns:1fr}.steel{order:-1}}
+.mascotte{width:clamp(130px,18vw,190px);height:auto;display:block}
+@media (max-width:560px){.menu-head{grid-template-columns:1fr}.mascotte{order:-1}}
 .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,44px)}
 .menu-grid>*{min-width:0}
 @media (max-width:900px){.menu-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.menu-grid{grid-template-columns:1fr}}
-.menu-col{display:flex;flex-direction:column;gap:28px}
+.menu-col{display:flex;flex-direction:column;justify-content:space-between;gap:28px}
 .cat h3{font-family:var(--display);font-weight:400;font-size:1.35rem;color:var(--brand);padding-bottom:8px;border-bottom:3px solid var(--brand);margin-bottom:4px}
 .item{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px dashed var(--line)}
 .item .price{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--muted)}
