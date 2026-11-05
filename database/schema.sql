@@ -189,7 +189,9 @@ INSERT INTO photos (pad, alt, label, plek, formaat, volgorde) VALUES
  ('images/menukaart.jpg', 'De menukaart voor de gevel met het club Coco-logo', NULL, 'galerij', 'hoog', 3),
  ('images/cappuccino-menu.jpg', 'Cappuccino en menukaart op een stalen tafeltje', NULL, 'galerij', 'hoog', 4),
  ('images/bekers.jpg', 'Stapels koffiebekers op de toog, met het logo op het raam', NULL, 'galerij', 'hoog', 5),
- ('images/menu-tafel.jpg', 'Menukaart op een stalen tafeltje naast de bordeaux tegels', NULL, 'galerij', 'breed', 6);
+ ('images/menu-tafel.jpg', 'Menukaart op een stalen tafeltje naast de bordeaux tegels', NULL, 'galerij', 'breed', 6),
+ ('images/take-away-bekers.jpeg', 'Afhaalbekers van club Coco op de houten toog: een doorzichtige beker met rietje en een witte koffiebeker, allebei met het logo', NULL, 'galerij', 'breed', 7),
+ ('images/schaduw-logo-toog.jpeg', 'De schaduw van het club Coco-logo op de houten toog, naast gestapelde krukjes en onder de Rocket-espressomachine', NULL, 'galerij', 'breed', 8);
 
 INSERT INTO settings (sleutel, waarde) VALUES
  ('melding', ''),

@@ -64,9 +64,9 @@ nav ul a:hover{text-decoration:underline;text-underline-offset:4px}
 @media (max-width:640px){nav ul{display:none}}
 
 /* hero */
-/* koffiebonen over de volle breedte; donkere verloop links houdt de tekst leesbaar */
+/* reflectie van het logo op de bordeaux muur, rechts naast de tekst (op gsm erboven); de effen kleur houdt de tekst leesbaar */
 .hero{--brand:#d9c9ec;--lilac:#2a140c;--lilac-ink:#fbf3ee;color:var(--lilac-ink);min-height:min(88vh,760px);display:flex;align-items:center;padding-block:clamp(56px,9vw,112px);
-  background:linear-gradient(90deg,rgba(26,10,6,.88) 0%,rgba(26,10,6,.7) 45%,rgba(26,10,6,.35) 100%),url("../../images/bonen.jpg") center/cover no-repeat #2a140c}
+  background:linear-gradient(90deg,#3d0b16 56.5%,rgba(61,11,22,0) 72%),url("../../images/reflectie-logo-op-muur.jpeg") 140% 15%/60% auto no-repeat #3d0b16}
 .hero .wrap{width:100%}
 .hero-grid{display:grid;grid-template-columns:minmax(0,640px);align-items:center}
 .hero-grid>*{min-width:0}
@@ -85,7 +85,7 @@ nav ul a:hover{text-decoration:underline;text-underline-offset:4px}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
 .hero-photo{border-radius:999px 999px 28px 28px;overflow:hidden;aspect-ratio:4/5;max-width:100%;box-shadow:0 20px 50px -20px rgba(60,10,20,.5)}
 .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
-@media (max-width:780px){.hero{background:linear-gradient(rgba(26,10,6,.78),rgba(26,10,6,.78)),url("../../images/bonen.jpg") center/cover no-repeat #2a140c}.hero-brand .word{letter-spacing:-.12em}.hero-brand .mini{left:18px}.hero-brand .bean{right:-18px;bottom:10px}}
+@media (max-width:780px){.hero{align-items:flex-start;padding-top:46vw;background:linear-gradient(180deg,rgba(61,11,22,0) 40vw,#3d0b16 56vw),url("../../images/reflectie-logo-op-muur.jpeg") 0 -15vw/135% auto no-repeat #3d0b16}.hero-brand .word{letter-spacing:-.12em}.hero-brand .mini{left:18px}.hero-brand .bean{right:-18px;bottom:10px}}
 
 /* about */
 .about{background:var(--bordeaux);color:var(--bordeaux-ink)}
