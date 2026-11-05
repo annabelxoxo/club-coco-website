@@ -115,7 +115,7 @@ admin_head("Foto's", 'fotos');
         </select>
       </label>
       <label>Label <span class="hint">enkel boven de kaart</span>
-        <input type="text" name="label" id="label-nieuw" maxlength="60" placeholder="bv. Huisgemaakte buns">
+        <input type="text" name="label" id="label-nieuw" maxlength="60" placeholder="bv. Overheerlijke buns">
       </label>
     </div>
     <div class="actions"><button class="btn" type="submit">Uploaden</button></div>

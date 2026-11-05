@@ -183,7 +183,7 @@ INSERT INTO photos (pad, alt, label, plek, formaat, volgorde) VALUES
  ('images/interieur.jpg', 'Interieur van club Coco met houten stoelen, stalen tafeltjes en een bank op bordeaux tegels', NULL, 'verhaal', 'normaal', 1),
  ('images/ontbijt.jpg', 'Pancakes met banaan en rood fruit, en een bagel met zalm en avocado', 'Ontbijt & lunch', 'kaart', 'normaal', 1),
  ('images/latte-art.jpg', 'Cappuccino met latte art in een bordeaux kopje', 'Specialty coffee', 'kaart', 'normaal', 2),
- ('images/buns.jpg', 'Versgebakken cinnamon en kardemom buns op een bakplaat', 'Huisgemaakte buns', 'kaart', 'normaal', 3),
+ ('images/buns.jpg', 'Versgebakken cinnamon en kardemom buns op een bakplaat', 'Overheerlijke buns', 'kaart', 'normaal', 3),
  ('images/bar-avond.jpg', 'De bar van club Coco ''s avonds, met het logo op de muur en de Rocket-espressomachine', NULL, 'galerij', 'breed', 1),
  ('images/gevel-raam.jpg', 'Het raam van club Coco met schapenvachten en houten krukjes', NULL, 'galerij', 'hoog', 2),
  ('images/menukaart.jpg', 'De menukaart voor de gevel met het club Coco-logo', NULL, 'galerij', 'hoog', 3),
