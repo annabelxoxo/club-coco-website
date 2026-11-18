@@ -22,7 +22,7 @@ function admin_head(string $titel, string $actief = '', bool $menu = true): void
 <link rel="icon" href="../images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Figtree:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Figtree:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/css/admin.css">
 </head>
 <body>
