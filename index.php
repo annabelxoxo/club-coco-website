@@ -108,7 +108,7 @@ $vandaag    = (int) date('w');
           <p class="pastry-week"><b>Pastry van de week</b> <?= h($pastry) ?></p>
         <?php endif; ?>
       </div>
-      <img class="mascotte" src="images/mascotte.png" alt="De mascotte van club Coco: een lachende zilveren babykrokodil met een rood hartje op de wang" loading="lazy">
+      <img class="mascotte" src="images/mascotte.png" alt="De mascotte van club Coco: een lachende babykrokodil met een hartje op de wang" loading="lazy">
     </div>
 
     <?php if ($fotosKaart): ?>
